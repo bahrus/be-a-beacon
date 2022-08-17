@@ -17,6 +17,7 @@ define<BeABeaconProps & BeDecoratedProps<BeABeaconProps, BeABeaconActions>, BeAB
         tagName,
         propDefaults:{
             ifWantsToBe,
+            forceVisible: ['template'],
             upgrade,
             virtualProps: [],
 

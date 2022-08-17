@@ -10,6 +10,7 @@ define({
         tagName,
         propDefaults: {
             ifWantsToBe,
+            forceVisible: ['template'],
             upgrade,
             virtualProps: [],
         },
