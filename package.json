@@ -1,16 +1,47 @@
 {
   "name": "be-a-beacon",
   "version": "0.0.0",
+  "keywords": [
+    "web-components",
+    "web-component",
+    "custom-element",
+    "custom-elements",
+    "decorate",
+    "behavior",
+    "directive",
+    "read-file",
+    "file-reader"
+  ],
   "description": "",
-  "main": "index.js",
+  "main": "be-a-beacon.js",
+  "module": "be-a-beacon.js",
+  "type": "module",
+  "exports":{
+    ".": "./be-a-beacon.js",
+    "./be-a-beacon.js": "./be-a-beacon.js"
+  },
+  "files": [
+    "."
+  ],
+  "types": "types.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package-check": "package-check",
+    "serve": "node node_modules/may-it-serve/serve.js"
+  },
+  "dependencies": {
+    "be-decorated": "0.0.131",
+    "be-hive": "0.0.54"
+  },
+  "devDependencies": {
+    "@skypack/package-check": "0.2.2",
+    "may-it-serve": "0.0.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/be-a-beacon.git"
   },
-  "author": "",
+  "author": "Bruce Anderson <anderson.bruce.b@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bahrus/be-a-beacon/issues"
