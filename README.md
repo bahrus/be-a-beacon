@@ -10,6 +10,18 @@ be-a-becon is an HTML Element behavior / decorator that causes the HTMLTemplate 
 
 ## Use cases
 
-1.  be-a-beacon provides an very similar, but slightly different solution to a limitation of the platform -- we don't know when a DOM element has finished parsing.  The solution this component provides an alternative to is spelled out [here](https://github.com/WICG/webcomponents/issues/809).
+1.  be-a-beacon provides an very similar, but slightly different solution to a current [limitation of the platform](https://github.com/WICG/webcomponents/issues/809) -- we don't know when a DOM element has finished parsing.  The solution this component provides is an alternative to the solution spelled out [here](https://github.com/WICG/webcomponents/issues/809#issuecomment-534115603).
 
-The difference is that this decorator gets applied to a template element, which can appear anywhere inside a table element without being rudely ejected.
+The difference is that this solution gets applied to a template element, which can appear in many more places without violating HTML decorum.  In particular, it can appear inside a table element without being rudely ejected:
+
+```html
+<table>
+    <thead>
+        ...
+    </thead>
+    <tbody>
+        ...
+    </tbody>
+    <template be-a-beacon></template>
+</table>
+```
