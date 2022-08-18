@@ -3,7 +3,9 @@ import {BeABeaconActions, BeABeaconProps, BeABeaconVirtualProps} from './types';
 import { register } from 'be-hive/register.js';
 
 export class BeABeacon implements BeABeaconActions{
-
+    intro(proxy: Element & BeABeaconVirtualProps, target: Element, beDecorProps: BeDecoratedProps<any, any>): void {
+        target.dispatchEvent(new CustomEvent('i-am-here'));
+    }
 }
 
 export interface BeABeacon extends BeABeaconProps{}
@@ -20,11 +22,9 @@ define<BeABeaconProps & BeDecoratedProps<BeABeaconProps, BeABeaconActions>, BeAB
             forceVisible: ['template'],
             upgrade,
             virtualProps: [],
-
+            intro: 'intro',
         },
-        actions:{
-
-        }
+        actions:{}
     },
     complexPropDefaults:{
         controller: BeABeacon

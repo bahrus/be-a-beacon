@@ -9,5 +9,5 @@ export interface BeABeaconProps extends BeABeaconVirtualProps{
 }
 
 export interface BeABeaconActions{
-    
+    intro(proxy: Element & BeABeaconVirtualProps, target: Element, beDecorProps: BeDecoratedProps): void;
 }

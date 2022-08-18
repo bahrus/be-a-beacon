@@ -1,6 +1,9 @@
 import { define } from 'be-decorated/be-decorated.js';
 import { register } from 'be-hive/register.js';
 export class BeABeacon {
+    intro(proxy, target, beDecorProps) {
+        target.dispatchEvent(new CustomEvent('i-am-here'));
+    }
 }
 const tagName = 'be-a-beacon';
 const ifWantsToBe = 'a-beacon';
@@ -13,6 +16,7 @@ define({
             forceVisible: ['template'],
             upgrade,
             virtualProps: [],
+            intro: 'intro',
         },
         actions: {}
     },
