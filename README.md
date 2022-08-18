@@ -25,3 +25,5 @@ The difference is that this solution gets applied to a template element, which c
     <template be-a-beacon></template>
 </table>
 ```
+
+2.  If a div element (say) is populating by a (streaming) fetch request, and that populating is done numerous times based on user interaction / timing events, then the placement of the beacon at the end of the stream can be used instead of a mutation observer to indicate, for example, that some content dirived from the contents of the DOM is ready to be generated.
