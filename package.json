@@ -1,6 +1,6 @@
 {
   "name": "be-a-beacon",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [
     "web-components",
     "web-component",
@@ -16,7 +16,7 @@
   "main": "be-a-beacon.js",
   "module": "be-a-beacon.js",
   "type": "module",
-  "exports":{
+  "exports": {
     ".": "./be-a-beacon.js",
     "./be-a-beacon.js": "./be-a-beacon.js"
   },
