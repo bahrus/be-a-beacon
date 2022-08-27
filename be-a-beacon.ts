@@ -2,7 +2,7 @@ import {define, BeDecoratedProps} from 'be-decorated/be-decorated.js';
 import {BeABeaconActions, BeABeaconProps, BeABeaconVirtualProps} from './types';
 import { register } from 'be-hive/register.js';
 
-export class BeABeacon implements BeABeaconActions{
+export class BeABeacon extends EventTarget implements BeABeaconActions {
     intro(proxy: Element & BeABeaconVirtualProps, target: Element, beDecorProps: BeDecoratedProps<any, any>): void {
         target.dispatchEvent(new CustomEvent('i-am-here'));
         proxy.resolve = true;
