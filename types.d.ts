@@ -1,6 +1,6 @@
-import {BeDecoratedProps} from 'be-decorated/be-decorated.js';
+import {BeDecoratedProps, MinimalProxy} from 'be-decorated/types';
 
-export interface BeABeaconVirtualProps{
+export interface BeABeaconVirtualProps extends MinimalProxy{
 
 }
 

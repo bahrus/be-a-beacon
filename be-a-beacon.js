@@ -3,6 +3,7 @@ import { register } from 'be-hive/register.js';
 export class BeABeacon {
     intro(proxy, target, beDecorProps) {
         target.dispatchEvent(new CustomEvent('i-am-here'));
+        proxy.resolve = true;
     }
 }
 const tagName = 'be-a-beacon';
