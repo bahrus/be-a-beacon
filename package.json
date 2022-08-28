@@ -21,7 +21,7 @@
     "./be-a-beacon.js": "./be-a-beacon.js"
   },
   "files": [
-    "."
+    "*.*"
   ],
   "types": "types.d.ts",
   "scripts": {
