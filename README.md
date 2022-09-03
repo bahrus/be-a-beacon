@@ -10,7 +10,7 @@ be-a-becon is an HTML Element behavior / decorator that causes the HTMLTemplate 
 
 ## Use cases
 
-1.  be-a-beacon provides an very similar, but slightly different solution to a current [limitation of the platform](https://github.com/WICG/webcomponents/issues/809) -- we don't know when a DOM element has finished parsing.  The solution this component provides is an alternative to the solution spelled out [here](https://github.com/WICG/webcomponents/issues/809#issuecomment-534115603).
+1.  be-a-beacon provides a similar, but slightly different solution to a current [limitation of the platform](https://github.com/WICG/webcomponents/issues/809) -- we don't know when a DOM element has finished parsing.  The solution this component provides is an alternative to the solution spelled out [here](https://github.com/WICG/webcomponents/issues/809#issuecomment-534115603).
 
 The difference is that this solution gets applied to a template element, which can appear in many more places without violating HTML decorum.  In particular, it can appear inside a table element without being rudely ejected:
 
@@ -27,3 +27,5 @@ The difference is that this solution gets applied to a template element, which c
 ```
 
 2.  If a div element (say) is populated by a (streaming) fetch request, and that populating is done numerous times based on user interaction / timing events, then the placement of the beacon at the end of the stream can be used instead of a mutation observer to indicate, for example, that some content that should derived from the contents of the DOM is ready to be generated.
+
+3.  If a component wishes to provide its own default light children, in the event that the consumer doesn't provide their own, a cue is needed to know when no light children will be provided.
