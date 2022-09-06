@@ -1,20 +1,20 @@
 import {BeDecoratedProps, MinimalProxy} from 'be-decorated/types';
 
 
-export interface BeABeaconEndUserProps {}
-export interface BeABeaconVirtualProps extends MinimalProxy{
+export interface EndUserProps {}
+export interface VirtualProps extends EndUserProps, MinimalProxy{
 
 }
 
-export type Proxy = HTMLTemplateElement & BeABeaconVirtualProps;
+export type Proxy = HTMLTemplateElement & VirtualProps;
 
-export interface BeABeaconProxy extends BeABeaconVirtualProps{
+export interface ProxyProps extends VirtualProps{
     proxy: Proxy;
 }
 
-export type BABP = BeABeaconProxy;
+export type PP = ProxyProps;
 
 
-export interface BeABeaconActions{
+export interface Actions{
     intro(proxy: Proxy, target: HTMLTemplateElement, beDecorProps: BeDecoratedProps): void;
 }
