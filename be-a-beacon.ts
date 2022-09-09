@@ -4,7 +4,9 @@ import { register } from 'be-hive/register.js';
 
 export class BeABeacon extends EventTarget implements Actions {
     intro(proxy: Proxy, target: HTMLTemplateElement, beDecorProps: BeDecoratedProps<any, any>): void {
-        target.dispatchEvent(new CustomEvent('i-am-here'));
+        target.dispatchEvent(new CustomEvent('i-am-here', {
+            bubbles: true,
+        }));
         proxy.resolved = true;
     }
 }
