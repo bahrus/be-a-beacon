@@ -33,3 +33,4 @@ define<VirtualProps & BeDecoratedProps<VirtualProps, Actions>, Actions>({
 });
 
 register(ifWantsToBe, upgrade, tagName);
+

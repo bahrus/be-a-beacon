@@ -18,7 +18,8 @@
   "type": "module",
   "exports": {
     ".": "./be-a-beacon.js",
-    "./be-a-beacon.js": "./be-a-beacon.js"
+    "./be-a-beacon.js": "./be-a-beacon.js",
+    "./childrenParsed.js": "./childrenParsed.js"
   },
   "files": [
     "*.*"

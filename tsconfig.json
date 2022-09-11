@@ -9,7 +9,8 @@
 		"strict": true,
 	},
 	"files":[
-		"be-a-beacon.ts"
+		"be-a-beacon.ts",
+		"childrenParsed.ts"
 		
 	],
 	"exclude":[
