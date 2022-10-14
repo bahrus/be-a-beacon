@@ -30,8 +30,8 @@
     "serve": "node node_modules/may-it-serve/serve.js"
   },
   "dependencies": {
-    "be-decorated": "0.0.172",
-    "be-hive": "0.0.73"
+    "be-decorated": "0.0.174",
+    "be-hive": "0.0.74"
   },
   "devDependencies": {
     "@skypack/package-check": "0.2.2",
