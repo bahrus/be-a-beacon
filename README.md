@@ -1,5 +1,7 @@
 # be-a-beacon
 
+be-a-becon is an HTML Element behavior / decorator that causes the HTMLTemplate element it adorns to emit event 'i-am-here", the moment it is connected to the element.
+
 [![Playwright Tests](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml)
 
 <a href="https://nodei.co/npm/be-a-beacon/"><img src="https://nodei.co/npm/be-a-beacon.png"></a>
@@ -8,7 +10,7 @@
 
 <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/be-a-beacon?compression=gzip">
 
-be-a-becon is an HTML Element behavior / decorator that causes the HTMLTemplate element it adorns to emit event 'i-am-here", the moment it is connected to the element.
+
 
 ## Use cases
 
