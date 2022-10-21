@@ -3,7 +3,7 @@ import {Actions, PP, VirtualProps, Proxy} from './types';
 import { register } from 'be-hive/register.js';
 
 export class BeABeacon extends EventTarget implements Actions {
-    intro(proxy: Proxy, target: HTMLTemplateElement, beDecorProps: BeDecoratedProps<any, any>): void {
+    intro(proxy: Proxy, target: HTMLTemplateElement): void {
         target.dispatchEvent(new CustomEvent('i-am-here', {
             bubbles: true,
         }));
@@ -20,6 +20,7 @@ define<VirtualProps & BeDecoratedProps<VirtualProps, Actions>, Actions>({
         tagName,
         propDefaults:{
             ifWantsToBe,
+            noParse: true,
             forceVisible: ['template'],
             upgrade,
             virtualProps: [],

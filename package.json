@@ -30,7 +30,7 @@
     "serve": "node node_modules/may-it-serve/serve.js"
   },
   "dependencies": {
-    "be-decorated": "0.0.182",
+    "be-decorated": "0.0.186",
     "be-hive": "0.0.76"
   },
   "devDependencies": {

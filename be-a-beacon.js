@@ -1,7 +1,7 @@
 import { define } from 'be-decorated/DE.js';
 import { register } from 'be-hive/register.js';
 export class BeABeacon extends EventTarget {
-    intro(proxy, target, beDecorProps) {
+    intro(proxy, target) {
         target.dispatchEvent(new CustomEvent('i-am-here', {
             bubbles: true,
         }));
@@ -16,6 +16,7 @@ define({
         tagName,
         propDefaults: {
             ifWantsToBe,
+            noParse: true,
             forceVisible: ['template'],
             upgrade,
             virtualProps: [],
