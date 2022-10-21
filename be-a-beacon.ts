@@ -26,7 +26,6 @@ define<VirtualProps & BeDecoratedProps<VirtualProps, Actions>, Actions>({
             virtualProps: [],
             intro: 'intro',
         },
-        actions:{}
     },
     complexPropDefaults:{
         controller: BeABeacon

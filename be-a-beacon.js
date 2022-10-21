@@ -22,7 +22,6 @@ define({
             virtualProps: [],
             intro: 'intro',
         },
-        actions: {}
     },
     complexPropDefaults: {
         controller: BeABeacon
