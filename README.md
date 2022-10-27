@@ -6,7 +6,11 @@ be-a-becon is an HTML Element behavior / decorator that causes the HTMLTemplate 
 
 <a href="https://nodei.co/npm/be-a-beacon/"><img src="https://nodei.co/npm/be-a-beacon.png"></a>
 
+Size of package, including custom element behavior framework (be-decorated):
+
 [![How big is this package in your project?](https://img.shields.io/bundlephobia/minzip/be-a-beacon?style=for-the-badge)](https://bundlephobia.com/result?p=be-a-beacon)
+
+Size of new code in this package:
 
 <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/be-a-beacon?compression=gzip">
 
