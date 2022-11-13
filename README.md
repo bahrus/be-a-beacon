@@ -34,7 +34,7 @@ The difference is that this solution gets applied to a template element, which c
 </table>
 ```
 
-2.  If a div element (say) is populated by a (streaming) fetch request, and that populating is done numerous times based on user interaction / timing events, then the placement of the beacon at the end of the stream can be used instead of a mutation observer to indicate, for example, that some content that should derived from the contents of the DOM is ready to be generated.
+2.  If a div element (say) is populated by a (streaming) fetch request, and that populating is done numerous times based on user interaction / timing events, then the placement of the beacon at the end of the stream can be used instead of a mutation observer to indicate, for example, that some content that should be derived from the contents of the DOM is ready to be generated.
 
 3.  If a component wishes to provide its own default light children, in the event that the consumer doesn't provide their own, a cue is needed to know when no light children will be provided.
 

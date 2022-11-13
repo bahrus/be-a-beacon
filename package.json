@@ -30,13 +30,13 @@
     "serve": "node node_modules/may-it-serve/serve.js"
   },
   "dependencies": {
-    "be-decorated": "0.0.190",
+    "be-decorated": "0.0.192",
     "be-hive": "0.0.77"
   },
   "devDependencies": {
     "@skypack/package-check": "0.2.2",
     "@playwright/test": "1.27.1",
-    "may-it-serve": "0.0.3"
+    "may-it-serve": "0.0.4"
   },
   "repository": {
     "type": "git",
