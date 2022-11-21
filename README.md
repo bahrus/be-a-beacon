@@ -3,8 +3,7 @@
 be-a-becon is an HTML Element behavior / decorator that causes the HTMLTemplate element it adorns to emit event 'i-am-here", the moment it is connected to the element.
 
 [![Playwright Tests](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml)
-
-<a href="https://nodei.co/npm/be-a-beacon/"><img src="https://nodei.co/npm/be-a-beacon.png"></a>
+[![NPM version](https://badge.fury.io/js/be-a-beacon.png)](http://badge.fury.io/js/be-a-beacon)
 
 Size of package, including custom element behavior framework (be-decorated):
 
