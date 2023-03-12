@@ -8,11 +8,11 @@ export interface VirtualProps extends EndUserProps, MinimalProxy{
 
 export type Proxy = HTMLTemplateElement & VirtualProps;
 
-export interface ProxyProps extends VirtualProps{
+export interface PP extends VirtualProps{
     proxy: Proxy;
 }
 
-export type PP = ProxyProps;
+export type ProxyProps = PP;
 
 
 export interface Actions{
