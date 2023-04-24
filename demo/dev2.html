@@ -8,14 +8,7 @@
 </head>
 <body>
     <template id='beacon' be-a-beacon></template>
-    <script>
-        beacon.addEventListener('i-am-here', e => {
-            console.log(e);
-        });
-        beacon.addEventListener('be-decorated.a-beacon.resolved', e=> {
-            console.log(e);
-        });
-    </script>
+
     <table>
         <tbody>
             <tr>
@@ -37,6 +30,19 @@
     <script type=module>
         import '../be-a-beacon2.js';
     </script>
-
+    <script type="module">
+        beacon.addEventListener('i-am-here', e => {
+            //console.log(e);
+        });
+        await customElements.whenDefined('be-enhanced');
+        const enhancer = await beacon.beEnhanced.whenDefined('be-a-beacon');
+        //console.log({isResolved: enhancer.resolved});
+        enhancer.addEventListener('resolved-changed', e => {
+            //console.log({e})
+        });
+        // beacon.addEventListener('be-enhanced.a-beacon.resolved', e=> {
+        //     console.log(e);
+        // });
+    </script>
 </body>
 </html>
