@@ -36,13 +36,10 @@
         });
         await customElements.whenDefined('be-enhanced');
         const enhancer = await beacon.beEnhanced.whenDefined('be-a-beacon');
-        //console.log({isResolved: enhancer.resolved});
+        console.log({isResolved: enhancer.resolved});
         enhancer.addEventListener('resolved-changed', e => {
-            //console.log({e})
+            console.log({e})
         });
-        // beacon.addEventListener('be-enhanced.a-beacon.resolved', e=> {
-        //     console.log(e);
-        // });
     </script>
 </body>
 </html>

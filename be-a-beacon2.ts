@@ -10,7 +10,7 @@ export class BeABeacon2 extends BE{
             bubbles: true,
         }));
         await super.attach(enhancedElement, enhancement);
-        console.log('resolving');
+        console.log(this.resolved);
         this.resolved = true;
     }
 }
@@ -27,7 +27,8 @@ const xe = new XE<IBE, Actions>({
         },
         propInfo: {
             ...propInfo
-        }
+        },
+        actions:{}
     },
     superclass: BeABeacon2
 });
