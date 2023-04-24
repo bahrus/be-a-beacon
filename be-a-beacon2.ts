@@ -28,7 +28,7 @@ const xe = new XE<IBE, Actions>({
         propInfo: {
             ...propInfo
         },
-        actions:{}
+        //actions:{}
     },
     superclass: BeABeacon2
 });
