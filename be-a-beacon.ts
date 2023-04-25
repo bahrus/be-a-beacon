@@ -4,7 +4,7 @@ import {IBE} from 'be-enhanced/types.js';
 import {Actions} from './types';
 import {register} from 'be-hive/register.js';
 
-export class BeABeacon2 extends BE{
+export class BeABeacon extends BE{
     override async attach(enhancedElement: Element, enhancement: string): Promise<void> {
         enhancedElement.dispatchEvent(new CustomEvent('i-am-here', {
             bubbles: true,
@@ -28,7 +28,7 @@ const xe = new XE<IBE, Actions>({
             ...propInfo
         },
     },
-    superclass: BeABeacon2
+    superclass: BeABeacon
 });
 
 register(ifWantsToBe, upgrade, tagName);
