@@ -9,13 +9,10 @@
 		"strict": true,
 	},
 	"files":[
-		"be-a-beacon2.ts",
+		"be-a-beacon.ts",
 		"childrenParsed.ts"
-		
 	],
 	"exclude":[
-		"build",
-		"bower_components",
 		"node_modules"
 	]
 

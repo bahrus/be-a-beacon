@@ -7,8 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <template id='beacon' be-a-beacon></template>
-
+    <template id='beacon' be-a-beacon>
+        <template be-a-beacon></template>
+    </template>
+    <div id="target"></div>
     <table>
         <tbody>
             <tr>
@@ -17,6 +19,7 @@
         </tbody>
         <template be-a-beacon></template>
     </table>
+    <button onclick="expandTemplate()">expand</button>
     <script type=importmap>
         {
             "imports": {
@@ -40,6 +43,11 @@
         enhancer.addEventListener('resolved-changed', e => {
             console.log({e})
         });
+    </script>
+    <script>
+        function expandTemplate(){
+            target.appendChild(beacon.content.cloneNode(true));
+        }
     </script>
 </body>
 </html>
