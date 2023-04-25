@@ -1,6 +1,6 @@
 # be-a-beacon
 
-be-a-becon is an HTML Element behavior / decorator that causes the HTMLTemplate element it adorns to emit event 'i-am-here", the moment it is connected to the element.
+be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate element it adorns to emit event 'i-am-here", the moment it is connected to the element.
 
 [![Playwright Tests](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml)
 [![NPM version](https://badge.fury.io/js/be-a-beacon.png)](http://badge.fury.io/js/be-a-beacon)
