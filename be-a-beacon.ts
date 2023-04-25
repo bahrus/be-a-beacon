@@ -10,7 +10,6 @@ export class BeABeacon2 extends BE{
             bubbles: true,
         }));
         await super.attach(enhancedElement, enhancement);
-        console.log(this.resolved);
         this.resolved = true;
     }
 }

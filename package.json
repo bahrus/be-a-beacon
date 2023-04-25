@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "be-enhanced": "0.0.3",
-    "be-hive": "0.0.83"
+    "be-hive": "0.0.83",
+    "xtal-element": "0.0.556"
   },
   "devDependencies": {
     "@playwright/test": "1.32.3",
