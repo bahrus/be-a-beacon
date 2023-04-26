@@ -25,8 +25,8 @@
             "imports": {
                 "trans-render/": "../node_modules/trans-render/",
                 "xtal-element/": "../node_modules/xtal-element/",
-                "be-enhanced/": "../node_modules/be-enhanced/",
-                "be-hive/":  "../node_modules/be-hive/"
+                "be-enhanced/": "../be-enhanced/",
+                "be-hive/":  "../be-hive/"
             }
         }
     </script>
@@ -35,7 +35,7 @@
     </script>
     <script type="module">
         beacon.addEventListener('i-am-here', e => {
-            //console.log(e);
+            console.log(e);
         });
         await customElements.whenDefined('be-enhanced');
         const enhancer = await beacon.beEnhanced.whenDefined('be-a-beacon');
