@@ -32,9 +32,9 @@
     "serve": "node node_modules/may-it-serve/serve.js"
   },
   "dependencies": {
-    "be-enhanced": "0.0.23",
-    "be-hive": "0.0.96",
-    "xtal-element": "0.0.563"
+    "be-enhanced": "0.0.25",
+    "be-hive": "0.0.99",
+    "xtal-element": "0.0.564"
   },
   "devDependencies": {
     "@playwright/test": "1.34.3",

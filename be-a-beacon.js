@@ -1,18 +1,18 @@
 import { BE, propDefaults, propInfo } from 'be-enhanced/BE.js';
 import { XE } from 'xtal-element/XE.js';
 import { register } from 'be-hive/register.js';
-export class BeABeacon2 extends BE {
-    async attach(enhancedElement, enhancement) {
+export class BeABeacon extends BE {
+    async attach(enhancedElement, enhancementInfo) {
         enhancedElement.dispatchEvent(new CustomEvent('i-am-here', {
             bubbles: true,
         }));
-        await super.attach(enhancedElement, enhancement);
+        await super.attach(enhancedElement, enhancementInfo);
         this.resolved = true;
     }
 }
 const tagName = 'be-a-beacon';
 const ifWantsToBe = 'a-beacon';
-const upgrade = 'template';
+const upgrade = '*';
 const xe = new XE({
     config: {
         tagName,
@@ -23,6 +23,6 @@ const xe = new XE({
             ...propInfo
         },
     },
-    superclass: BeABeacon2
+    superclass: BeABeacon
 });
 register(ifWantsToBe, upgrade, tagName);
