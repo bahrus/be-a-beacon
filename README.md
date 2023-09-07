@@ -31,6 +31,8 @@ oSection.addEventListener('last-div-at-your-service', e => {
 
 ### Announce the presence of the id of the element [TODO]
 
+This is useful, for example, for [bundling HTML includes](https://github.com/bahrus/be-written#support-for-bundling)
+
 ```html
 <section>
     ...
