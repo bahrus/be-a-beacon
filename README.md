@@ -42,6 +42,8 @@ This is useful, for example, for [bundling HTML includes](https://github.com/bah
 </section>
 ```
 
+So the special value of "#" means emit event with the name specified by the id.
+
 [![Playwright Tests](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml)
 [![NPM version](https://badge.fury.io/js/be-a-beacon.png)](http://badge.fury.io/js/be-a-beacon)
 
