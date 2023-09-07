@@ -44,7 +44,7 @@ Size of new code in this package:
 
 1.  be-a-beacon provides a similar, but slightly different solution to a current [limitation of the platform](https://github.com/WICG/webcomponents/issues/809) -- we don't know when a DOM element has finished parsing.  The solution this component provides is an alternative to the solution spelled out [here](https://github.com/WICG/webcomponents/issues/809#issuecomment-534115603).
 
-The difference is that this solution gets applied to a template element, which can appear in many more places without violating HTML decorum.  In particular, it can appear inside a table element without being rudely ejected:
+The difference is that this solution doesn't require a separate web component, but can simply "enhance" the last built-in DOM element of the stream.  The template element, for example can be used universally, because it is one of the few elements that can appear in many more places without violating HTML decorum.  In particular, it can appear inside a table element without being rudely ejected:
 
 ```html
 <table>
