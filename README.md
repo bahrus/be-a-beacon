@@ -10,21 +10,34 @@ be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate element 
 
 ## Specify event name [TODO]
 
+### Spell out the name of the event [TODO]
+
 To specify a different event name, set the attribute to the name ("type") of the event you would like it to emit:
 
 ```html
 <section>
     ...
-    <div be-a-beacon=how-can-i-help>
+    <div be-a-beacon=last-div-at-your-service>
         ...
     </div>
 </section>
 ```
 
 ```JavaScript
-oSection.addEventListener('how-can-i-help', e => {
+oSection.addEventListener('last-div-at-your-service', e => {
     console.log(e.target);
 })
+```
+
+### Announce the presence of the id of the element [TODO]
+
+```html
+<section>
+    ...
+    <template id=b0735b7a-84d1-42e9-b3b8-e24cb88f5985 be-a-beacon=#>
+        ...
+    </template>
+</section>
 ```
 
 [![Playwright Tests](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml)
