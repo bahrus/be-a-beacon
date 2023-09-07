@@ -1,6 +1,31 @@
 # be-a-beacon
 
-be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate element it adorns to emit event 'i-am-here", the moment it is connected to the element.
+be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate element it adorns to emit bubbling event 'i-am-here", the moment it is connected to the element
+
+```html
+<div be-a-beacon>
+    ...
+</div>
+```
+
+## Specify event name [TODO]
+
+To specify a different event name, set the attribute to the name ("type") of the event you would like it to emit:
+
+```html
+<section>
+    ...
+    <div be-a-beacon=how-can-i-help>
+        ...
+    </div>
+</section>
+```
+
+```JavaScript
+oSection.addEventListener('how-can-i-help', e => {
+    console.log(e.target);
+})
+```
 
 [![Playwright Tests](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml)
 [![NPM version](https://badge.fury.io/js/be-a-beacon.png)](http://badge.fury.io/js/be-a-beacon)
