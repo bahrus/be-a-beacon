@@ -1,6 +1,6 @@
 # be-a-beacon
 
-be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate (or any other) element it adorns to emit bubbling event 'i-am-here", the moment it is connected to the live DOM tree.  It is important to note that be-a-beacon is a special type of custom enhancement -- one that only should be activated in the live DOM tree, not during template instantiation.  During template instantiation, we already know everything that is in the template via simple css queries -- it is a closed system.  be-a-beacon is specifically tailored for situations where elements arrive on the scene unexpectedly -- while the server-rendered HTML is streaming, or when fragments are added when conditions warrant it in the browser (i.e. lazy loading). 
+be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate (or any other) element it adorns to emit bubbling event 'i-am-here", the moment it is connected to the live DOM tree.  It is important to note that be-a-beacon is a special type of custom enhancement -- one that only should be activated in the live DOM tree, not during template instantiation.  During template instantiation, we already know everything that is in the template via simple css queries -- it is a closed system.  be-a-beacon is specifically tailored for situations where elements arrive on the scene unexpectedly -- while the server-rendered HTML is streaming, or when fragments are added when conditions are warranted in the browser (i.e. lazy loading). 
 
 ```html
 <div be-a-beacon>
@@ -59,7 +59,7 @@ Size of new code in this package:
 
 1.  be-a-beacon provides a similar, but slightly different solution to a current [limitation of the platform](https://github.com/WICG/webcomponents/issues/809) -- we don't know when a DOM element has finished parsing.  The solution this component provides is an alternative to the solution spelled out [here](https://github.com/WICG/webcomponents/issues/809#issuecomment-534115603).
 
-The difference is that this solution doesn't require a separate web component, but can simply "enhance" the last built-in DOM element of the stream.  The template element, for example can be used universally, because it is one of the few elements that can appear in many more places without violating HTML decorum.  In particular, it can appear inside a table element without being rudely ejected:
+The difference is that this solution doesn't require a separate web component, but can simply "enhance" the last DOM element of the stream.  The template element might be a good element to use be-a-beacon on, because the template element can be used universally -- it is one of the few elements that can appear in many more places without violating HTML decorum.  In particular, it can appear inside a table element without being rudely ejected:
 
 ```html
 <table>
@@ -71,6 +71,15 @@ The difference is that this solution doesn't require a separate web component, b
     </tbody>
     <template be-a-beacon></template>
 </table>
+```
+
+However, be-a-beacon can adorn any element, not just the template element.  If adorning a custom element, you will need to prefix the attribute with "enh-by":
+
+```html
+<my-fragment>
+    ...
+    <my-custom-element enh-by-be-a-beacon></my-custom-element>
+</my-fragment>
 ```
 
 2.  If a div element (say) is populated by a (streaming) fetch request, and that populating is done numerous times based on user interaction / timing events, then the placement of the beacon at the end of the stream can be used instead of a mutation observer to indicate, for example, that some content that should be derived from the contents of the DOM is ready to be generated.
