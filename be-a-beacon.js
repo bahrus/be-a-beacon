@@ -2,12 +2,19 @@ import { BE, propDefaults, propInfo } from 'be-enhanced/BE.js';
 import { XE } from 'xtal-element/XE.js';
 import { register } from 'be-hive/register.js';
 export class BeABeacon extends BE {
-    async attach(enhancedElement, enhancementInfo) {
-        enhancedElement.dispatchEvent(new CustomEvent('i-am-here', {
+    hydrate(self) {
+        const { enhancedElement, eventName } = self;
+        const type = eventName === '*' ? enhancedElement.id : eventName;
+        enhancedElement.dispatchEvent(new CustomEvent(type, {
             bubbles: true,
         }));
-        await super.attach(enhancedElement, enhancementInfo);
-        this.resolved = true;
+        return {
+            resolved: true,
+        };
+    }
+    retire(self) {
+        const { enhancedElement } = self;
+        enhancedElement.beEnhanced.whenDetached('be-a-beacon');
     }
 }
 const tagName = 'be-a-beacon';
@@ -17,11 +24,16 @@ const xe = new XE({
     config: {
         tagName,
         propDefaults: {
-            ...propDefaults
+            ...propDefaults,
+            eventName: 'i-am-here',
         },
         propInfo: {
             ...propInfo
         },
+        actions: {
+            hydrate: 'eventName',
+            retire: 'resolved'
+        }
     },
     superclass: BeABeacon
 });

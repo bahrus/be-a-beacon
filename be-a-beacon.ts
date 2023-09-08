@@ -1,32 +1,49 @@
 import {BE, propDefaults, propInfo} from 'be-enhanced/BE.js';
 import {XE} from 'xtal-element/XE.js';
 import {IBE, EnhancementInfo} from 'be-enhanced/types.js';
-import {Actions} from './types';
+import {Actions, AllProps, AP, PAP} from './types';
 import {register} from 'be-hive/register.js';
 
-export class BeABeacon extends BE{
-    override async attach(enhancedElement: Element, enhancementInfo: EnhancementInfo): Promise<void> {
-        enhancedElement.dispatchEvent(new CustomEvent('i-am-here', {
+export class BeABeacon extends BE implements Actions{
+    hydrate(self: this): PAP {
+        const {enhancedElement, eventName} = self;
+        const type = eventName === '*' ? enhancedElement.id : eventName
+        enhancedElement.dispatchEvent(new CustomEvent(type, {
             bubbles: true,
         }));
-        await super.attach(enhancedElement, enhancementInfo);
-        this.resolved = true;
+        return {
+            resolved: true,
+        }
     }
+
+    retire(self: this){
+        const {enhancedElement} = self;
+        (<any>enhancedElement).beEnhanced.whenDetached('be-a-beacon');
+    }
+}
+
+export interface BeABeacon extends AP{
+
 }
 
 const tagName = 'be-a-beacon';
 const ifWantsToBe = 'a-beacon';
 const upgrade = '*';
 
-const xe = new XE<IBE, Actions>({
+const xe = new XE<AP, Actions>({
     config: {
         tagName,
         propDefaults:{
-            ...propDefaults
+            ...propDefaults,
+            eventName: 'i-am-here', 
         },
         propInfo: {
             ...propInfo
         },
+        actions: {
+            hydrate: 'eventName',
+            retire: 'resolved'
+        }
     },
     superclass: BeABeacon
 });

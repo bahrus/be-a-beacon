@@ -8,8 +8,6 @@ be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate element 
 </div>
 ```
 
-## Specify event name [TODO]
-
 ### Spell out the name of the event [TODO]
 
 To specify a different event name, set the attribute to the name ("type") of the event you would like it to emit:
