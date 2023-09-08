@@ -88,6 +88,8 @@ However, be-a-beacon can adorn any element, not just the template element.  If a
 
 ## Viewing Locally
 
+Any web server that serves static files (html, css, js) will do but...
+
 1.  Install git.
 2.  Fork/clone this repo.
 3.  Install node.
