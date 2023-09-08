@@ -1,6 +1,6 @@
 # be-a-beacon
 
-be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate element it adorns to emit bubbling event 'i-am-here", the moment it is connected to the element
+be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate element it adorns to emit bubbling event 'i-am-here", the moment it is connected to the live DOM tree (unless the behavior is attached during template instantiation) ~which could be during template instantiation~ [TODO]
 
 ```html
 <div be-a-beacon>
@@ -8,7 +8,7 @@ be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate element 
 </div>
 ```
 
-### Spell out the name of the event [TODO]
+### Spell out the name of the event
 
 To specify a different event name, set the attribute to the name ("type") of the event you would like it to emit:
 
@@ -27,7 +27,7 @@ oSection.addEventListener('last-div-at-your-service', e => {
 })
 ```
 
-### Announce the presence of the id of the element [TODO]
+### Announce the presence of the id of the element
 
 This is useful, for example, for [bundling HTML includes](https://github.com/bahrus/be-written#support-for-bundling)
 
