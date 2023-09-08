@@ -6,12 +6,8 @@
     "web-component",
     "custom-element",
     "custom-elements",
-    "decorate",
     "enhancement",
-    "behavior",
-    "directive",
-    "read-file",
-    "file-reader"
+    "behavior"
   ],
   "description": "",
   "main": "be-a-beacon.js",
