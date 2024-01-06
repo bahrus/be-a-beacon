@@ -3,7 +3,7 @@ import {XE} from 'xtal-element/XE.js';
 import {BEConfig} from 'be-enhanced/types';
 import {IBE, EnhancementInfo} from 'be-enhanced/types.js';
 import {Actions, AllProps, AP, PAP} from './types';
-import {register} from 'be-hive/register.js';
+
 
 export class BeABeacon extends BE implements Actions{
     static  override get beConfig(){
@@ -34,9 +34,8 @@ export interface BeABeacon extends AP{
 
 }
 
-const tagName = 'be-a-beacon';
-const ifWantsToBe = 'a-beacon';
-const upgrade = '*';
+export const tagName = 'be-a-beacon';
+
 
 const xe = new XE<AP, Actions>({
     config: {
@@ -56,6 +55,6 @@ const xe = new XE<AP, Actions>({
     superclass: BeABeacon
 });
 
-register(ifWantsToBe, upgrade, tagName);
+
 
 

@@ -8,7 +8,7 @@
 		"strict": true,
 	},
 	"files":[
-		"be-a-beacon.ts",
+		"behivior.ts",
 		"childrenParsed.ts"
 	],
 	"exclude":[
