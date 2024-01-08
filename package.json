@@ -10,8 +10,8 @@
     "behavior"
   ],
   "description": "",
-  "main": "behivior.js",
-  "module": "behivior.js",
+  "main": "be-a-beacon.js",
+  "module": "be-a-beacon.js",
   "exports": {
     ".": "./be-a-beacon.js",
     "./be-a-beacon.js": "./be-a-beacon.js",
@@ -30,9 +30,9 @@
     "update": "ncu -u && npm install"
   },
   "dependencies": {
-    "be-enhanced": "0.0.57",
-    "be-hive": "0.0.128",
-    "xtal-element": "0.0.580"
+    "be-enhanced": "0.0.58",
+    "be-hive": "0.0.129",
+    "xtal-element": "0.0.581"
   },
   "devDependencies": {
     "@playwright/test": "1.40.1",
