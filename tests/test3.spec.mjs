@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-test('test1', async ({ page }) => {
-    await page.goto('./tests/test1.html');
+test('test3', async ({ page }) => {
+    await page.goto('./tests/test3.html');
     // wait for 1 second
     await page.waitForTimeout(2000);
     const editor = page.locator('#target');
