@@ -1,4 +1,4 @@
-import './be-a-beacon.js';
+import './legacy/be-a-beacon.js';
 export function childrenParsed(parent) {
     return new Promise(resolved => {
         const existing = Array.from(parent.querySelectorAll('[be-a-beacon],[enh-by-be-a-beacon],[data-enh-by-be-a-beacon]'));

@@ -1,18 +1,28 @@
-import {BE, propDefaults, propInfo} from 'be-enhanced/BE.js';
-import {XE} from 'xtal-element/XE.js';
-import {BEConfig} from 'be-enhanced/types';
-import {IBE, EnhancementInfo} from 'be-enhanced/types.js';
+import {config as beCnfg} from 'be-enhanced/config.js';
+import {BE, BEConfig} from 'be-enhanced/BE.js';
 import {Actions, AllProps, AP, PAP} from './types';
-
+import { IEnhancement, PropInfo,  BEAllProps} from './be-enhanced/types';
+import { Positractions } from 'trans-render/froop/types';
 
 export class BeABeacon extends BE implements Actions{
-    static  override get beConfig(){
-        return {
-            parse: true,
-            primaryProp: 'eventName',
-            attachWhenConnected: true,
-        } as BEConfig;
+    static override config: BEConfig<AP & BEAllProps, Actions & IEnhancement, any> = {
+        propDefaults:{
+            eventName: 'i-am-here'
+        },
+        propInfo: {
+            ...beCnfg.propInfo as Partial<{[key in keyof AP]: PropInfo}>,
+        },
+        positractions: beCnfg.positractions as Positractions<IEnhancement>,
+        actions:{
+            hydrate: {
+                ifAllOf: ['eventName']
+            },
+            retire: {
+                ifAllOf: ['resolved']
+            }
+        }
     }
+
     hydrate(self: this): PAP {
         const {enhancedElement, eventName} = self;
         const type = eventName === '#' ? enhancedElement.id : eventName
@@ -21,7 +31,7 @@ export class BeABeacon extends BE implements Actions{
         }));
         return {
             resolved: true,
-        }
+        } as PAP
     }
 
     retire(self: this){
@@ -33,28 +43,3 @@ export class BeABeacon extends BE implements Actions{
 export interface BeABeacon extends AP{
 
 }
-
-export const tagName = 'be-a-beacon';
-
-
-const xe = new XE<AP, Actions>({
-    config: {
-        tagName,
-        propDefaults:{
-            ...propDefaults,
-            eventName: 'i-am-here', 
-        },
-        propInfo: {
-            ...propInfo
-        },
-        actions: {
-            hydrate: 'eventName',
-            retire: 'resolved'
-        }
-    },
-    superclass: BeABeacon
-});
-
-
-
-

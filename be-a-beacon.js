@@ -1,13 +1,23 @@
-import { BE, propDefaults, propInfo } from 'be-enhanced/BE.js';
-import { XE } from 'xtal-element/XE.js';
+import { config as beCnfg } from 'be-enhanced/config.js';
+import { BE } from 'be-enhanced/BE.js';
 export class BeABeacon extends BE {
-    static get beConfig() {
-        return {
-            parse: true,
-            primaryProp: 'eventName',
-            attachWhenConnected: true,
-        };
-    }
+    static config = {
+        propDefaults: {
+            eventName: 'i-am-here'
+        },
+        propInfo: {
+            ...beCnfg.propInfo,
+        },
+        positractions: beCnfg.positractions,
+        actions: {
+            hydrate: {
+                ifAllOf: ['eventName']
+            },
+            retire: {
+                ifAllOf: ['resolved']
+            }
+        }
+    };
     hydrate(self) {
         const { enhancedElement, eventName } = self;
         const type = eventName === '#' ? enhancedElement.id : eventName;
@@ -23,21 +33,3 @@ export class BeABeacon extends BE {
         enhancedElement.beEnhanced.whenDetached('be-a-beacon');
     }
 }
-export const tagName = 'be-a-beacon';
-const xe = new XE({
-    config: {
-        tagName,
-        propDefaults: {
-            ...propDefaults,
-            eventName: 'i-am-here',
-        },
-        propInfo: {
-            ...propInfo
-        },
-        actions: {
-            hydrate: 'eventName',
-            retire: 'resolved'
-        }
-    },
-    superclass: BeABeacon
-});
