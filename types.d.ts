@@ -1,7 +1,7 @@
 import { ActionOnEventConfigs } from "trans-render/froop/types";
-import {IBE} from 'be-enhanced/types';
+import {IEnhancement} from 'trans-render/be/types';
 
-export interface EndUserProps extends IBE{
+export interface EndUserProps extends IEnhancement{
     eventName: string, //TODO
 }
 export interface AllProps extends EndUserProps{}

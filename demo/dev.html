@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test 1</title>
 </head>
 <body>
-    <template id='beacon' be-a-beacon>
-        <template be-a-beacon></template>
-    </template>
-    <div id="target"></div>
+    <template id='beacon' be-a-beacon></template>
+    <div id='target'></div>
+    <script>
+        beacon.addEventListener('i-am-here', e => {
+            target.setAttribute('mark', 'good');
+        });
+        beacon.addEventListener('be-decorated.a-beacon.resolved', e=> {
+            console.log(e);
+        });
+    </script>
     <table>
         <tbody>
             <tr>
@@ -19,35 +25,20 @@
         </tbody>
         <template be-a-beacon></template>
     </table>
-    <button onclick="expandTemplate()">expand</button>
     <script type=importmap>
         {
             "imports": {
-                "trans-render/": "../node_modules/trans-render/",
-                "xtal-element/": "../node_modules/xtal-element/",
-                "be-enhanced/": "../be-enhanced/",
-                "be-hive/":  "../be-hive/"
+                "be-enhanced/": "/be-enhanced/",
+                "be-hive/":  "/be-hive/",
+                "mount-observer/": "/mount-observer/",
+                "trans-render/": "/trans-render/"
+                
             }
         }
     </script>
     <script type=module>
-        import '../be-a-beacon.js';
+        import '../behivior.js';
     </script>
-    <script type="module">
-        beacon.addEventListener('i-am-here', e => {
-            console.log(e);
-        });
-        await customElements.whenDefined('be-enhanced');
-        const enhancer = await beacon.beEnhanced.whenDefined('be-a-beacon');
-        console.log({isResolved: enhancer.resolved});
-        enhancer.addEventListener('resolved-changed', e => {
-            console.log({e})
-        });
-    </script>
-    <script>
-        function expandTemplate(){
-            target.appendChild(beacon.content.cloneNode(true));
-        }
-    </script>
+
 </body>
 </html>
