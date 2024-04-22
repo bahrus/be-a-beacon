@@ -1,4 +1,4 @@
-import './legacy/be-a-beacon.js';
+import './behivior.js';
 
 export function childrenParsed(parent: Element): Promise<void>{
     return new Promise(resolved => {
