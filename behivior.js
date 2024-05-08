@@ -7,6 +7,9 @@ await BeABeacon.bootUp();
 def('be-a-beacon', BeABeacon);
 BeHive.registry.register({
     base: 'be-a-beacon',
+    map: {
+        '0.0': 'eventName'
+    },
     do: {
         mount: {
             import: async () => {

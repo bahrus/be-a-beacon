@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test 1</title>
 </head>
 <body>
-    <template id='beacon' be-a-beacon></template>
+    <template id='beacon' be-a-beacon=my-event></template>
+    <div id='target'></div>
     <script>
-        beacon.addEventListener('i-am-here', e => {
-            console.log(e);
+        beacon.addEventListener('my-event', e => {
+            target.setAttribute('mark', 'good');
         });
         beacon.addEventListener('be-decorated.a-beacon.resolved', e=> {
             console.log(e);
@@ -27,15 +28,16 @@
     <script type=importmap>
         {
             "imports": {
-                "trans-render/": "../trans-render/",
-                "xtal-element/": "../xtal-element/",
-                "be-decorated/": "../be-enhanced/",
-                "be-hive/":  "../be-hive/"
+                "be-enhanced/": "/node_modules/be-enhanced/",
+                "be-hive/":  "/node_modules/be-hive/",
+                "mount-observer/": "/node_modules/mount-observer/",
+                "trans-render/": "/node_modules/trans-render/"
+                
             }
         }
     </script>
     <script type=module>
-        import '../be-a-beacon2.js';
+        import '../behivior.js';
     </script>
 
 </body>
