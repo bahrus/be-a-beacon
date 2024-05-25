@@ -1,8 +1,6 @@
-import {BeHive} from 'be-hive/be-hive.js';
+import {BeHive, EnhancementMountCnfg} from 'be-hive/be-hive.js';
 import './behance.js';
-import {EnhancementMountCnfg} from 'trans-render/be/types';
-import {MountObserverScriptElement} from 'mount-observer/types';
-import {MountObserver} from 'mount-observer/MountObserver.js';
+import {MountObserver, MountObserverScriptElement} from 'mount-observer/MountObserver.js';
 
 const emc: EnhancementMountCnfg = {
     base: 'be-a-beacon',
@@ -17,7 +15,6 @@ const emc: EnhancementMountCnfg = {
 }
 
 const mose = document.createElement('script') as MountObserverScriptElement<EnhancementMountCnfg>;
-mose.type = 'mountobserver';
 mose.synConfig = emc;
 
 MountObserver.synthesize(document, BeHive, mose);
