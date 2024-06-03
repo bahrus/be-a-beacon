@@ -1,8 +1,8 @@
-import {BeHive, EnhancementMountCnfg} from 'be-hive/be-hive.js';
+import {BeHive, EMC} from 'be-hive/be-hive.js';
 import {MountObserver, MOSE} from 'mount-observer/MountObserver.js';
 
 const base = 'be-a-beacon';
-export const emc: EnhancementMountCnfg = {
+export const emc: EMC = {
     base,
     map: {
         '0.0': 'eventName'
@@ -14,7 +14,7 @@ export const emc: EnhancementMountCnfg = {
     }
 };
 
-const mose = document.createElement('script') as MOSE<EnhancementMountCnfg>;
+const mose = document.createElement('script') as MOSE<EMC>;
 mose.id = base;
 mose.synConfig = emc;
 

@@ -40,6 +40,4 @@ export class BeABeacon extends BE implements Actions{
     }
 }
 
-export interface BeABeacon extends AP{
-
-}
+export interface BeABeacon extends AP{}
