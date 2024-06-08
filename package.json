@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "be-enhanced": "0.0.98",
-    "be-hive": "0.0.174",
+    "be-hive": "0.0.175",
     "mount-observer": "0.0.27",
     "trans-render": "0.0.780"
   },

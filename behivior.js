@@ -1,5 +1,4 @@
-import { BeHive, seed } from 'be-hive/be-hive.js';
-import { MountObserver } from 'mount-observer/MountObserver.js';
+import { BeHive, seed, MountObserver } from 'be-hive/be-hive.js';
 const base = 'be-a-beacon';
 export const emc = {
     base,
