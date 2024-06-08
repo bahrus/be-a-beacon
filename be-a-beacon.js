@@ -8,7 +8,7 @@ export class BeABeacon extends BE {
         propInfo: {
             ...beCnfg.propInfo,
         },
-        positractions: beCnfg.positractions,
+        positractions: [...beCnfg.positractions],
         actions: {
             hydrate: {
                 ifAllOf: ['eventName']

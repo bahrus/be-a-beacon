@@ -12,7 +12,7 @@ export class BeABeacon extends BE implements Actions{
         propInfo: {
             ...beCnfg.propInfo as Partial<{[key in keyof AP]: PropInfo}>,
         },
-        positractions: beCnfg.positractions as Positractions<IEnhancement>,
+        positractions: [...beCnfg.positractions as Positractions<IEnhancement>],
         actions:{
             hydrate: {
                 ifAllOf: ['eventName']
