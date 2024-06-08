@@ -1,10 +1,13 @@
-import { BeHive } from 'be-hive/be-hive.js';
+import { BeHive, seed } from 'be-hive/be-hive.js';
 import { MountObserver } from 'mount-observer/MountObserver.js';
 const base = 'be-a-beacon';
 export const emc = {
     base,
     map: {
-        '0.0': 'eventName'
+        '0.0': {
+            mapsTo: 'eventName',
+            valIfFalsy: 'i-am-here'
+        }
     },
     enhPropKey: 'beABeacon',
     importEnh: async () => {
@@ -12,7 +15,5 @@ export const emc = {
         return BeABeacon;
     }
 };
-const mose = document.createElement('script');
-mose.id = base;
-mose.synConfig = emc;
+const mose = seed(emc);
 MountObserver.synthesize(document, BeHive, mose);
