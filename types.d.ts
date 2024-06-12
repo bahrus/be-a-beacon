@@ -1,4 +1,3 @@
-import { ActionOnEventConfigs } from "trans-render/froop/types";
 import {IEnhancement} from 'trans-render/be/types';
 
 export interface EndUserProps extends IEnhancement{
@@ -12,7 +11,6 @@ export type PAP = Partial<AP>;
 
 export type ProPAP = Promise<PAP>;
 
-export type POA = [PAP | undefined, ActionOnEventConfigs<PAP, Actions>];
 
 export interface Actions{
     hydrate(self: this): PAP;
