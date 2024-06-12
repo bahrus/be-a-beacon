@@ -1,8 +1,7 @@
 import {BeHive, EMC, seed, MountObserver} from 'be-hive/be-hive.js';
 
-const base = 'be-a-beacon';
 export const emc: EMC = {
-    base,
+    base: 'be-a-beacon',
     map: {
         '0.0': {
             mapsTo: 'eventName',
