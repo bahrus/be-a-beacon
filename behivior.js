@@ -9,7 +9,7 @@ export const emc = {
     },
     enhPropKey: 'beABeacon',
     importEnh: async () => {
-        const { BeABeacon } = await import('./behance.js');
+        const { BeABeacon } = await import('./be-a-beacon.js');
         return BeABeacon;
     }
 };

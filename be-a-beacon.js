@@ -1,6 +1,6 @@
 import { config as beCnfg } from 'be-enhanced/config.js';
 import { BE } from 'be-enhanced/BE.js';
-export class BeABeacon extends BE {
+class BeABeacon extends BE {
     static config = {
         propDefaults: {
             eventName: 'i-am-here'
@@ -33,3 +33,5 @@ export class BeABeacon extends BE {
         enhancedElement.beEnhanced.whenDetached('be-a-beacon');
     }
 }
+await BeABeacon.bootUp();
+export { BeABeacon };

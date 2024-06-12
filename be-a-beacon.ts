@@ -4,7 +4,7 @@ import {Actions, AllProps, AP, PAP} from './types';
 import { Positractions, PropInfo } from 'trans-render/froop/types';
 import {IEnhancement,  BEAllProps} from 'trans-render/be/types';
 
-export class BeABeacon extends BE implements Actions{
+class BeABeacon extends BE implements Actions{
     static override config: BEConfig<AP & BEAllProps, Actions & IEnhancement, any> = {
         propDefaults:{
             eventName: 'i-am-here'
@@ -40,4 +40,9 @@ export class BeABeacon extends BE implements Actions{
     }
 }
 
-export interface BeABeacon extends AP{}
+interface BeABeacon extends AP{}
+
+await BeABeacon.bootUp();
+
+export {BeABeacon}
+
