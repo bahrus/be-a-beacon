@@ -1,4 +1,4 @@
-# be-a-beacon
+# be-a-beacon (🗽)
 
 be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate (or any other) element it adorns to emit bubbling event 'i-am-here", the moment it is connected to the live DOM tree.  It is important to note that be-a-beacon is a special type of custom enhancement -- one that only should be activated in the live DOM tree, not during template instantiation.  During template instantiation, we already know everything that is in the template via simple css queries -- it is a closed system.  be-a-beacon is specifically tailored for situations where elements arrive on the scene unexpectedly -- while the server-rendered HTML is streaming, or when fragments are added when conditions are warranted in the browser (i.e. lazy loading). 
 
