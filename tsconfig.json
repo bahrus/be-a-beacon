@@ -6,9 +6,10 @@
 		"experimentalDecorators": false,
 		"newLine": "LF",
 		"strict": true,
+		"skipLibCheck": true
 	},
 	"files":[
-		"behivior.ts",
+		"🗽.ts",
 		"childrenParsed.ts"
 	],
 	"exclude":[
