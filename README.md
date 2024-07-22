@@ -27,6 +27,12 @@ oSection.addEventListener('last-div-at-your-service', e => {
 })
 ```
 
+## Shorter name
+
+be-a-beacon is the formal canonical name of this enhancement.  IN less formal settings, where clashes between different libraries are less likely, you can reference an alternative file, 🗽.js, and use a much shorter name:
+
+To see how easy it is to define your own name, see the [file](https://github.com/bahrus/be-a-beacon/blob/baseline/%F0%9F%97%BD.ts) that registers this alternative name.
+
 ### Announce the presence of the id of the element
 
 This is useful, for example, for [bundling HTML includes](https://github.com/bahrus/be-written#support-for-bundling)
@@ -34,7 +40,7 @@ This is useful, for example, for [bundling HTML includes](https://github.com/bah
 ```html
 <section>
     ...
-    <template id=b0735b7a-84d1-42e9-b3b8-e24cb88f5985 be-a-beacon=#>
+    <template id=b0735b7a-84d1-42e9-b3b8-e24cb88f5985 🗽=#>
         ...
     </template>
 </section>
