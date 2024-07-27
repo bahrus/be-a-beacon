@@ -17,9 +17,7 @@ export function childrenParsed(parent) {
         }
         const abortController = new AbortController();
         parent.addEventListener('i-am-here', e => {
-            if (isLastChild(parent, 
-                /** @type {Element} */
-                (e.target))) {
+            if (isLastChild(parent, /** @type {Element} */(e.target))) {
                 abortController.abort();
                 resolved();
             }
