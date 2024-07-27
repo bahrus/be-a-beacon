@@ -1,6 +1,18 @@
+// @ts-check
 import { config as beCnfg } from 'be-enhanced/config.js';
 import { BE } from 'be-enhanced/BE.js';
+/** @import {BEConfig} from './node_modules/be-enhanced/types.d.ts' */
+/** @import {Actions, PAP, AllProps, AP} from './types.d.ts' */;
+/** @import {IEnhancement,  BEAllProps} from './node_modules/trans-render/be/types.d.ts' */;
+
+/**
+ * @implements {Actions}
+ * 
+ */
 class BeABeacon extends BE {
+    /**
+     * @type {BEConfig<AP & BEAllProps, Actions & IEnhancement, any>}
+     */
     static config = {
         propDefaults: {
             eventName: 'i-am-here'
@@ -18,6 +30,12 @@ class BeABeacon extends BE {
             }
         }
     };
+
+    /**
+     * 
+     * @param {AP & BEAllProps} self 
+     * @returns 
+     */
     hydrate(self) {
         const { enhancedElement, eventName } = self;
         const type = eventName === '#' ? enhancedElement.id : eventName;
@@ -28,8 +46,16 @@ class BeABeacon extends BE {
             resolved: true,
         };
     }
+
+    /**
+     * 
+     * @param {AP & BEAllProps} self 
+     * @returns 
+     */
     retire(self) {
-        const { enhancedElement } = self;
+        const { enhancedElement } = 
+        /** @type {any} */
+        (self);
         enhancedElement.beEnhanced.whenDetached('be-a-beacon');
     }
 }

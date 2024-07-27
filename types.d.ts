@@ -1,4 +1,4 @@
-import {IEnhancement} from 'trans-render/be/types';
+import {IEnhancement, BEAllProps} from './node_modules/trans-render/be/types';
 
 export interface EndUserProps extends IEnhancement{
     eventName: string, //TODO
@@ -13,6 +13,6 @@ export type ProPAP = Promise<PAP>;
 
 
 export interface Actions{
-    hydrate(self: this): PAP;
-    retire(self: this): void;
+    hydrate(self: AP & BEAllProps): PAP;
+    retire(self: AP & BEAllProps): void;
 }
