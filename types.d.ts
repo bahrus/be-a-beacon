@@ -1,4 +1,4 @@
-import {IEnhancement, BEAllProps} from './node_modules/trans-render/be/types';
+import {IEnhancement, BEAllProps} from './ts-refs/trans-render/be/types';
 
 export interface EndUserProps extends IEnhancement{
     eventName: string, //TODO
