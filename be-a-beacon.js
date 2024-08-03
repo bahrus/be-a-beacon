@@ -1,5 +1,5 @@
 // @ts-check
-import { config as beCnfg } from 'be-enhanced/config.js';
+import { propInfo, rejected, resolved } from 'be-enhanced/cc.js';
 import { BE } from 'be-enhanced/BE.js';
 /** @import {BEConfig, IEnhancement, BEAllProps} from './ts-refs/be-enhanced/types.d.ts' */
 /** @import {Actions, PAP, AllProps, AP} from './types.d.ts' */;
@@ -17,9 +17,9 @@ class BeABeacon extends BE {
             eventName: 'i-am-here'
         },
         propInfo: {
-            ...beCnfg.propInfo,
+            ...propInfo,
         },
-        positractions: [...beCnfg.positractions],
+        positractions: [resolved, rejected],
         actions: {
             hydrate: {
                 ifAllOf: ['eventName']
