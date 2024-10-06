@@ -1,5 +1,5 @@
 // @ts-check
-import './behivior.js';
+import './emc.js';
 /**
  * 
  * @param {Element} parent 
