@@ -9,6 +9,7 @@ export const emc = {
     base: 'be-a-beacon',
     map: {
         '0.0': {
+            instanceOf: 'String',
             mapsTo: 'eventName',
             valIfFalsy: 'i-am-here'
         }
