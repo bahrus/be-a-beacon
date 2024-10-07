@@ -8,6 +8,16 @@ be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate (or any 
 </div>
 ```
 
+The markup above is the "canonical" name, associated with this package name.
+
+To use a shorter name, in a more closed, informal environment where conflicts between libraries can be easily avoided, we can define a file that customize3s the name.  For example, [this alternative](https://github.com/bahrus/be-a-beacon/blob/baseline/%F0%9F%97%BD.js) allows us to use 🗽 instead:
+
+```html
+<div 🗽>
+    ...
+</div>
+```
+
 ### Spell out the name of the event
 
 To specify a different event name, set the attribute to the name ("type") of the event you would like it to emit:
