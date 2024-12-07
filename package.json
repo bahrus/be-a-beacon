@@ -15,14 +15,16 @@
   "exports": {
     ".": "./be-a-beacon.js",
     "./be-a-beacon.js": "./be-a-beacon.js",
-    "./childrenParsed.js": "./childrenParsed.js"
+    "./childrenParsed.js": "./childrenParsed.js",
+    "./emc.js": "./emc.js",
+    "./🗽.js": "./🗽.js"
   },
   "files": [
     "*.js",
     "types.d.ts",
     "README.md"
   ],
-  "types": "types.d.ts",
+  "types": "./ts-refs/be-a-beacon/types.d.ts",
   "scripts": {
     "test": "playwright test",
     "serve": "node node_modules/may-it-serve/serve.js",
