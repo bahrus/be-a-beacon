@@ -11,7 +11,7 @@ import {dispatchEvent as de} from 'trans-render/positractions/dispatchEvent.js';
  */
 class BeABeacon extends BE {
     /**
-     * @type {BEConfig<AP & BEAllProps, Actions & IEnhancement, any>}
+     * @type {BEConfig<AP & BEAllProps, Actions & IEnhancement>}
      */
     static config = {
         propDefaults: {
