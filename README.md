@@ -1,5 +1,10 @@
 # be-a-beacon (🗽)
 
+[![Playwright Tests](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml)
+[![NPM version](https://badge.fury.io/js/be-a-beacon.png)](http://badge.fury.io/js/be-a-beacon)
+[![How big is this package in your project?](https://img.shields.io/bundlephobia/minzip/be-a-beacon?style=for-the-badge)](https://bundlephobia.com/result?p=be-a-beacon)
+<img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/be-a-beacon?compression=gzip">
+
 be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate (or any other) element it adorns to emit bubbling event 'i-am-here", the moment it is connected to the live DOM tree.  It is important to note that be-a-beacon is a special type of custom enhancement -- one that only should be activated in the live DOM tree, not during template instantiation.  During template instantiation, we already know everything that is in the template via simple css queries -- it is a closed system.  be-a-beacon is specifically tailored for situations where elements arrive on the scene unexpectedly -- while the server-rendered HTML is streaming, or when fragments are added when conditions are warranted in the browser (i.e. lazy loading). 
 
 ```html
@@ -39,7 +44,7 @@ oSection.addEventListener('last-div-at-your-service', e => {
 
 ## Shorter name
 
-be-a-beacon is the formal canonical name of this enhancement.  IN less formal settings, where clashes between different libraries are less likely, you can reference an alternative file, 🗽.js, and use a much shorter name:
+*be-a-beacon* is the formal canonical name of this enhancement.  In less formal settings, where clashes between different libraries are less likely, you can reference an alternative file, 🗽.js, and use a much shorter name:
 
 To see how easy it is to define your own name, see the [file](https://github.com/bahrus/be-a-beacon/blob/baseline/%F0%9F%97%BD.ts) that registers this alternative name.
 
@@ -57,18 +62,6 @@ This is useful, for example, for [bundling HTML includes](https://github.com/bah
 ```
 
 So the special value of "#" means emit event with the name specified by the id.
-
-[![Playwright Tests](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-a-beacon/actions/workflows/CI.yml)
-[![NPM version](https://badge.fury.io/js/be-a-beacon.png)](http://badge.fury.io/js/be-a-beacon)
-
-Size of package, including custom element behavior framework (be-decorated):
-
-[![How big is this package in your project?](https://img.shields.io/bundlephobia/minzip/be-a-beacon?style=for-the-badge)](https://bundlephobia.com/result?p=be-a-beacon)
-
-Size of new code in this package:
-
-<img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/be-a-beacon?compression=gzip">
-
 
 
 ## Use cases
