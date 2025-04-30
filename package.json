@@ -9,7 +9,7 @@
     "enhancement",
     "behavior"
   ],
-  "description": "",
+  "description": "be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate (or any other) element it adorns to emit bubbling event 'i-am-here', the moment it is connected to the live DOM tree. ",
   "main": "be-a-beacon.js",
   "module": "be-a-beacon.js",
   "exports": {
