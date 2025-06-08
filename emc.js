@@ -1,9 +1,10 @@
 // @ts-check
 import { BeHive, seed, MountObserver } from 'be-hive/be-hive.js';
 /** @import {EMC} from './ts-refs/trans-render/be/types' */
+/** @import {Actions, PAP, AllProps, AP} from './ts-refs/be-a-beacon/types' */;
 
 /**
- * @type {EMC}
+ * @type {EMC<any, AP>}
  */
 export const emc = {
     base: 'be-a-beacon',
