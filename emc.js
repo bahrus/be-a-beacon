@@ -22,7 +22,8 @@ export const emc = {
         /** @type {any} */
         (await import('./be-a-beacon.js'));
         return BeABeacon;
-    }
+    },
+    mapEmcTo: 'emc'
 };
 const mose = seed(emc);
 MountObserver.synthesize(document, BeHive, mose);

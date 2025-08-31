@@ -55,10 +55,10 @@ class BeABeacon extends BE {
      * @returns 
      */
     retire(self) {
-        const { enhancedElement } = 
+        const { enhancedElement, emc } = 
         /** @type {any} */
         (self);
-        enhancedElement.beEnhanced.whenDetached('be-a-beacon');
+        enhancedElement.beEnhanced.whenDetached(emc);
     }
 }
 await BeABeacon.bootUp();
