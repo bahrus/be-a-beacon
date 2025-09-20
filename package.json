@@ -27,19 +27,19 @@
   "types": "./ts-refs/be-a-beacon/types.d.ts",
   "scripts": {
     "test": "playwright test",
-    "serve": "python ./node_modules/ssi-server/ssi_server.py",
+    "serve": "node ./node_modules/spa-ssi/serve.js",
     "safari": "npx playwright wk http://localhost:8000",
     "update": "ncu -u && npm install"
   },
   "dependencies": {
-    "be-enhanced": "0.0.184",
-    "be-hive": "0.0.263",
-    "mount-observer": "0.0.89",
-    "trans-render": "0.0.930"
+    "be-enhanced": "0.0.188",
+    "be-hive": "0.0.266",
+    "mount-observer": "0.0.102",
+    "trans-render": "0.0.958"
   },
   "devDependencies": {
     "@playwright/test": "1.55.0",
-    "ssi-server": "0.0.1"
+    "spa-ssi": "0.0.12"
   },
   "repository": {
     "type": "git",
