@@ -44,9 +44,9 @@ class BeABeacon extends BE {
         enhancedElement.dispatchEvent(new CustomEvent(type, {
             bubbles: true,
         }));
-        return {
+        return /** @type {PAP} */ ({
             resolved: true,
-        };
+        });
     }
 
     /**
