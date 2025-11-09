@@ -3,7 +3,7 @@ import { propInfo, rejected, resolved } from 'be-enhanced/cc.js';
 import { BE } from 'be-enhanced/BE.js';
 import {dispatchEvent as de} from 'trans-render/positractions/dispatchEvent.js';
 /** @import {BEConfig, IEnhancement, BEAllProps} from './ts-refs/be-enhanced/types.d.ts' */
-/** @import {Actions, PAP, AllProps, AP} from './ts-refs/be-a-beacon/types' */;
+/** @import {Actions, PAP, AllProps, AP, BAP} from './ts-refs/be-a-beacon/types' */;
 
 /**
  * @implements {Actions}
@@ -11,7 +11,7 @@ import {dispatchEvent as de} from 'trans-render/positractions/dispatchEvent.js';
  */
 class BeABeacon extends BE {
     /**
-     * @type {BEConfig<AP & BEAllProps, Actions & IEnhancement>}
+     * @type {BEConfig<BAP, Actions & IEnhancement>}
      */
     static config = {
         propDefaults: {
@@ -35,7 +35,7 @@ class BeABeacon extends BE {
 
     /**
      * 
-     * @param {AP & BEAllProps} self 
+     * @param {BAP} self 
      * @returns 
      */
     hydrate(self) {
