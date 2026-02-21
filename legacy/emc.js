@@ -1,7 +1,7 @@
 // @ts-check
 import { BeHive, seed, MountObserver } from 'be-hive/be-hive.js';
-/** @import {EMC} from './ts-refs/trans-render/be/types' */
-/** @import {Actions, PAP, AllProps, AP} from './ts-refs/be-a-beacon/types' */;
+/** @import {EMC} from '../ts-refs/trans-render/be/types.js' */
+/** @import {Actions, PAP, AllProps, AP} from '../ts-refs/be-a-beacon/types.js' */;
 
 /**
  * @type {EMC<any, AP>}

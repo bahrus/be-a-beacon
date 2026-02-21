@@ -1,0 +1,13 @@
+{
+    "matching": "[be-hive]",
+    "mountedElemEmits": {
+        "event": "Event",
+        "args": [
+            "i-am-here",
+            {
+                "bubbles": true
+            }
+        ]
+    }
+}
+    

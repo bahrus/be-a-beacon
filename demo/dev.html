@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test 1</title>
+    <title>be-a-beacon with i-am-here</title>
     <!-- #include virtual="/imports.html" -->
 </head>
 <body>
@@ -26,9 +26,11 @@
         </tbody>
         <template be-a-beacon></template>
     </table>
-
+    <be-hive>
+        <script type=mountobserver src="be-a-beacon/enhConfig.json"></script>
+    </be-hive>
     <script type=module>
-        import '/emc.js';
+        import 'be-hive/be-hive.js';
     </script>
 
 </body>
