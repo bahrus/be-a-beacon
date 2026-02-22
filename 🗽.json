@@ -1,9 +1,5 @@
 {
-    "matching": "[🗽]",
-    "mountedElemEmits": {
-        "event": "Event",
-        "args": [
-            "i-am-here"
-        ]
-    }
+    "matching": "[🗽], [enh-🗽]",
+    "import": "be-a-beacon/🗽.js",
+    "do": "builtIns.enhanceMountedElement"
 }
