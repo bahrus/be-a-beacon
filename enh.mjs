@@ -1,15 +1,13 @@
 // @ts-check
-/** @import {MountConfig} from './node_modules/mount-observer/types' */;
+/** @import {MountConfig} from './types/mount-observer/types' */;
 
 /**
  * @type {MountConfig}
  */
 export const config = {
     matching: '[be-a-beacon],[enh-be-a-beacon]',
-    mountedElemEmits: {
-        event: 'Event',
-        args: ['i-am-here']
-    }
+    import: 'be-a-beacon/emc.js',
+    do: 'builtIns.enhanceMountedElement'
 };
 
 export function render(){

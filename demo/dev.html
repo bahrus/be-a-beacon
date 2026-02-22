@@ -15,20 +15,15 @@
             target.setAttribute('mark', 'good');
         });
     </script>
-    <table>
-        <tbody>
-            <tr>
-                <td>hello</td>
-            </tr>
-        </tbody>
-        <template be-a-beacon></template>
-    </table>
     <be-hive>
         <script type=mountobserver src="be-a-beacon/enh.mjs"></script>
     </be-hive>
     <script type=module>
         import 'be-hive/be-hive.js';
     </script>
-
+    <script type=module>
+        import {emc} from '../emc.js';
+        console.log({emc});
+    </script>
 </body>
 </html>
