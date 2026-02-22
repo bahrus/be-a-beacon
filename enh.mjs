@@ -1,11 +1,16 @@
 // @ts-check
 /** @import {MountConfig} from './types/mount-observer/types' */;
 
+import { emc } from './emc.js';
+import {buildCSSQuery} from './node_modules/assign-gingerly/buildCSSQuery.js';
+
+const matching = buildCSSQuery(emc, '');
+
 /**
  * @type {MountConfig}
  */
 export const config = {
-    matching: '[be-a-beacon],[enh-be-a-beacon]',
+    matching,
     import: 'be-a-beacon/emc.js',
     do: 'builtIns.enhanceMountedElement'
 };
