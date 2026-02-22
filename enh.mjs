@@ -11,3 +11,7 @@ const config = {
         args: ['i-am-here']
     }
 };
+
+export function render(){
+    return JSON.stringify(config, null, 4);
+}
