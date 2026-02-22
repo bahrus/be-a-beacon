@@ -26,6 +26,7 @@
   ],
   "types": "./ts-refs/be-a-beacon/types.d.ts",
   "scripts": {
+    "build": "node build.mjs > enh.json",
     "test": "playwright test",
     "serve": "node ./node_modules/spa-ssi/serve.js",
     "safari": "npx playwright wk http://localhost:8000",
