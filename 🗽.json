@@ -1,5 +1,5 @@
 {
-    "matching": "[be-a-beacon],[enh-be-a-beacon]",
+    "matching": "[🗽]",
     "mountedElemEmits": {
         "event": "Event",
         "args": [

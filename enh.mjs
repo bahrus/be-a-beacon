@@ -4,8 +4,8 @@
 /**
  * @type {MountConfig}
  */
-const config = {
-    matching: '[be-a-beacon],[enh-be-a-beacon],[🗽]',
+export const config = {
+    matching: '[be-a-beacon],[enh-be-a-beacon]',
     mountedElemEmits: {
         event: 'Event',
         args: ['i-am-here']
