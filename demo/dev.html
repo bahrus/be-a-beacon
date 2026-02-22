@@ -14,9 +14,6 @@
         beacon.addEventListener('i-am-here', e => {
             target.setAttribute('mark', 'good');
         });
-        beacon.addEventListener('be-decorated.a-beacon.resolved', e=> {
-            console.log(e);
-        });
     </script>
     <table>
         <tbody>
@@ -27,7 +24,7 @@
         <template be-a-beacon></template>
     </table>
     <be-hive>
-        <script type=mountobserver src="be-a-beacon/enhConfig.json"></script>
+        <script type=mountobserver src="be-a-beacon/enh.json"></script>
     </be-hive>
     <script type=module>
         import 'be-hive/be-hive.js';
