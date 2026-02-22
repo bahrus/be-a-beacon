@@ -11,6 +11,14 @@ be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate (or any 
 <div be-a-beacon>
     ...
 </div>
+
+...
+<be-hive>
+    <script type=mountobserver src="be-a-beacon/enh.json"></script>
+</be-hive>
+<script type=module>
+    import 'be-hive/be-hive.js';
+</script>
 ```
 
 The markup above is the "canonical" name, associated with this package name.
