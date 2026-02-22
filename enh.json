@@ -3,10 +3,7 @@
     "mountedElemEmits": {
         "event": "Event",
         "args": [
-            "i-am-here",
-            {
-                "bubbles": true
-            }
+            "i-am-here"
         ]
     }
 }
