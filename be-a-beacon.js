@@ -1,9 +1,10 @@
 //@ts-check
+/** @import {EnhancementConfig, SpawnContext} from './types/assign-gingerly/types' */;
 
-/** @import {BeABeaconProps} from './types/be-a-beacon/types' */
+/** @import { BeABeaconProps } from './types/be-a-beacon/types' */
 
 /**
- * @implements {BeABeaconProps}
+ * @type {typeof BeABeacon & {prototype: BeABeaconProps}}
  */
 export class BeABeacon {
     /**
@@ -13,7 +14,6 @@ export class BeABeacon {
      * @param {BeABeaconProps} initVals 
      */
     constructor(enhancedElement, ctx, initVals) {
-        console.log({ enhancedElement, ctx, initVals });
         const {eventName} = initVals;
         let evtName = eventName === '#' ? enhancedElement.id : eventName;
         if(!evtName) evtName = 'i-am-here';

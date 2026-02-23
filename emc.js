@@ -4,7 +4,7 @@
 /** @import {BeABeaconProps} from './types/be-a-beacon/types' */
 import { BeABeacon } from './be-a-beacon.js';
 
-/** @type {EnhancementConfig<BeABeaconProps>} */
+/** @type {EnhancementConfig<BeABeaconProps, Element>} */
 export const emc = {
     spawn: BeABeacon,
     withAttrs: {
