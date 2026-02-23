@@ -6,7 +6,7 @@ import { BeABeacon } from './be-a-beacon.js';
 
 /** @type {EnhancementConfig<BeABeaconProps, Element>} */
 export const emc = {
-    spawn: BeABeacon,
+    spawn: /** @type {any} */ (BeABeacon),
     withAttrs: {
         base: 'be-a-beacon',
         _base: {
