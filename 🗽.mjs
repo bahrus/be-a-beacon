@@ -1,10 +1,10 @@
 // @ts-check
 /** @import {MountConfig} from './types/mount-observer/types' */;
 
-import { emc } from './🗽.js';
+import { emojiEMC } from './emc.js';
 import {buildCSSQuery} from './node_modules/assign-gingerly/buildCSSQuery.js';
 
-const matching = buildCSSQuery(emc, '');
+const matching = buildCSSQuery(emojiEMC);
 
 /**
  * @type {MountConfig}

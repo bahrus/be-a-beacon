@@ -1,10 +1,10 @@
 // @ts-check
 /** @import {MountConfig} from './types/mount-observer/types' */;
 
-import { emc } from './emc.js';
+import { canonicalEMC } from './emc.js';
 import {buildCSSQuery} from './node_modules/assign-gingerly/buildCSSQuery.js';
 
-const matching = buildCSSQuery(emc, '');
+const matching = buildCSSQuery(canonicalEMC);
 
 /**
  * @type {MountConfig}

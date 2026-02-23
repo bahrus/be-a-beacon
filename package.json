@@ -34,7 +34,7 @@
     "update": "ncu -u && npm install"
   },
   "dependencies": {
-    "assign-gingerly": "0.0.17",
+    "assign-gingerly": "0.0.18",
     "be-hive": "0.1.2"
   },
   "devDependencies": {
