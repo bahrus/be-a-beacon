@@ -35,7 +35,8 @@
   },
   "dependencies": {
     "assign-gingerly": "0.0.18",
-    "be-hive": "0.1.2"
+    "be-hive": "0.1.2",
+    "mount-observer": "0.1.11"
   },
   "devDependencies": {
     "@playwright/test": "1.58.2",

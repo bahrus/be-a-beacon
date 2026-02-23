@@ -11,7 +11,7 @@ const matching = buildCSSQuery(emojiEMC);
  */
 export const config = {
     matching,
-    import: 'be-a-beacon/🗽.js',
+    import: 'be-a-beacon/emc.js',
     do: 'builtIns.enhanceMountedElement'
 };
 
