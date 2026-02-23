@@ -1,5 +1,5 @@
 //@ts-check
-/** @import {EnhancementConfig, SpawnContext} from './types/assign-gingerly/types' */;
+/** @import {EnhancementConfig, SpawnContext, ElementEnhancementGateway} from './types/assign-gingerly/types' */;
 
 /** @import { BeABeaconProps } from './types/be-a-beacon/types' */
 
@@ -9,7 +9,7 @@
 export class BeABeacon {
     /**
      * 
-     * @param {Element} enhancedElement 
+     * @param {Element & ElementEnhancementGateway} enhancedElement 
      * @param {*} ctx 
      * @param {BeABeaconProps} initVals 
      */
