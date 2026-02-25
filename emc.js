@@ -25,7 +25,7 @@ export const canonicalEMC = {
     withAttrs: canonicalWithAttrs
 };
 
-/** @type {EnhancementConfig<BeABeaconProps, Element>} */
+/** @type {EnhancementConfig<BeABeaconProps, Element>} */ 
 export const emojiEMC = {
     spawn,
     withAttrs: emojiWithAttrs,
