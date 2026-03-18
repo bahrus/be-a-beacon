@@ -8,14 +8,17 @@
     <!-- #include virtual="/imports.html" -->
 </head>
 <body>
-    <div id=div>
+    <div-1 id=div>
         <template shadowrootmode="open">
             <template id='beacon' be-a-beacon></template>
             <be-hive></be-hive>
         </template>
-    </div>
+    </div-1>
     <div id='target'></div>
     <script>
+        customElements.define('div-1', class extends HTMLElement {
+            
+        }); 
         div.shadowRoot.querySelector('#beacon').addEventListener('i-am-here', e => {
             target.setAttribute('mark', 'good');
         });
