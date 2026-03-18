@@ -1,16 +1,17 @@
-import {emc as baseEmc} from './emc.mjs';
+//@ts-check
+
 /** @import {EMC} from './types/mount-observer/types' */;
 /** @import {BeABeaconProps} from './types/be-a-beacon/types' */
 
 /**
  * @type {EMC<any, BeABeaconProps> }
  */
-const emc = {
+export const emc = {
     enhConfig: {
-        ...baseEmc.enhConfig,
-        enhKey: '🗽',
+        enhKey: 'BeABeacon',
+        spawn: 'be-a-beacon/be-a-beacon.js',
         withAttrs: {
-            base: '🗽'
+            base: 'be-a-beacon'
         }
     }
 }

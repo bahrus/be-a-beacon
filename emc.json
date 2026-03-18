@@ -1,9 +1,9 @@
 {
     "enhConfig": {
-        "enhKey": "🗽",
+        "enhKey": "BeABeacon",
         "spawn": "be-a-beacon/be-a-beacon.js",
         "withAttrs": {
-            "base": "🗽"
+            "base": "be-a-beacon"
         }
     }
 }

@@ -1,8 +1,8 @@
 //@ts-check
 
-/** @import {AttrPatterns, EnhancementConfig} from './types/assign-gingerly/types' */;
-/** @import {BeABeaconProps} from './types/be-a-beacon/types' */
-import { BeABeacon } from './be-a-beacon.js';
+/** @import {AttrPatterns, EnhancementConfig} from '../types/assign-gingerly/types.js' */;
+/** @import {BeABeaconProps} from '../types/be-a-beacon/types.js' */
+import { BeABeacon } from '../be-a-beacon.js';
 
 const spawn = /** @type {any} */ (BeABeacon);
 
@@ -29,5 +29,6 @@ export const canonicalEMC = {
 /** @type {EnhancementConfig<BeABeaconProps, Element>} */ 
 export const emojiEMC = {
     spawn,
+    enhKey: '🗽',
     withAttrs: emojiWithAttrs,
 }

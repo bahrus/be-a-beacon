@@ -1,5 +1,0 @@
-{
-    "matching": "[be-a-beacon], [enh-be-a-beacon]",
-    "import": "be-a-beacon/emc.js",
-    "do": "builtIns.enhanceMountedElement"
-}

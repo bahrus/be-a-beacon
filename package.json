@@ -27,7 +27,7 @@
   ],
   "types": "./ts-refs/be-a-beacon/types.d.ts",
   "scripts": {
-    "build": "node build-enh.mjs > enh.json && node build-🗽.mjs > 🗽.json",
+    "build": "node build-emc.mjs > emc.json && node build-🗽.mjs > 🗽.json",
     "test": "playwright test",
     "serve": "node ./node_modules/spa-ssi/serve.js",
     "safari": "npx playwright wk http://localhost:8000",
@@ -35,8 +35,8 @@
   },
   "dependencies": {
     "assign-gingerly": "0.0.23",
-    "be-hive": "0.1.4",
-    "mount-observer": "0.1.18"
+    "be-hive": "0.1.5",
+    "mount-observer": "0.1.20"
   },
   "devDependencies": {
     "@playwright/test": "1.58.2",
