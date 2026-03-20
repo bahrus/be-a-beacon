@@ -39,7 +39,7 @@
     "mount-observer": "0.1.23"
   },
   "devDependencies": {
-    "@playwright/test": "1.58.2",
+    "@playwright/test": "1.59.0-alpha-2026-02-28",
     "spa-ssi": "0.0.27"
   },
   "repository": {
