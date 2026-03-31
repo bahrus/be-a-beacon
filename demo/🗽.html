@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test 1</title>
+    <title>🗽</title>
     <!-- #include virtual="/imports.html" -->
 </head>
 <body>
@@ -14,21 +14,14 @@
         beacon.addEventListener('i-am-here', e => {
             target.setAttribute('mark', 'good');
         });
-        beacon.addEventListener('be-decorated.a-beacon.resolved', e=> {
-            console.log(e);
-        });
     </script>
-    <table>
-        <tbody>
-            <tr>
-                <td>hello</td>
-            </tr>
-        </tbody>
-        <template be-a-beacon></template>
-    </table>
 
+
+    <be-hive>
+        <script type=mountobserver src="be-a-beacon/🗽.mjs"></script>
+    </be-hive>
     <script type=module>
-        import '/🗽.js';
+        import 'be-hive/be-hive.js';
     </script>
 
 </body>

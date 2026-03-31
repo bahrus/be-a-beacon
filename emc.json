@@ -1,0 +1,9 @@
+{
+    "enhConfig": {
+        "enhKey": "BeABeacon",
+        "spawn": "be-a-beacon/be-a-beacon.js",
+        "withAttrs": {
+            "base": "be-a-beacon"
+        }
+    }
+}

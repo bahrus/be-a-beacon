@@ -5,22 +5,36 @@
 [![How big is this package in your project?](https://img.shields.io/bundlephobia/minzip/be-a-beacon?style=for-the-badge)](https://bundlephobia.com/result?p=be-a-beacon)
 <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/be-a-beacon?compression=gzip">
 
-be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate (or any other) element it adorns to emit bubbling event 'i-am-here', the moment it is connected to the live DOM tree.  It is important to note that be-a-beacon is a special type of custom enhancement -- one that only should be activated in the live DOM tree, not during template instantiation.  During template instantiation, we already know everything that is in the template via simple css queries -- it is a closed system.  be-a-beacon is specifically tailored for situations where elements arrive on the scene unexpectedly -- while the server-rendered HTML is streaming, or when fragments are added when conditions are warranted in the browser (i.e. lazy loading). 
+be-a-beacon is an HTML Element enhancement that causes the HTMLTemplate (or any other) element it adorns to emit, by default, bubbling event 'i-am-here', the moment it is connected to the live DOM tree.  be-a-beacon is specifically tailored for situations where elements arrive on the scene unexpectedly -- while the server-rendered HTML is streaming, or when fragments are added when conditions are warranted in the browser (i.e. lazy loading). 
 
 ```html
 <div be-a-beacon>
     ...
 </div>
+
+...
+<be-hive>
+    <script type=mountobserver src="be-a-beacon/enh.json"></script>
+</be-hive>
+<script type=module>
+    import 'be-hive/be-hive.js';
+</script>
 ```
 
 The markup above is the "canonical" name, associated with this package name.
 
-To use a shorter name, in a more closed, informal environment where conflicts between libraries can be easily avoided, we can define a file that customize3s the name.  For example, [this alternative](https://github.com/bahrus/be-a-beacon/blob/baseline/%F0%9F%97%BD.js) allows us to use 🗽 instead:
+To use a shorter name, in a more closed, informal environment where conflicts between libraries can be easily avoided, we can define a file that customizes the name.  For example, [this alternative](https://github.com/bahrus/be-a-beacon/blob/baseline/%F0%9F%97%BD.js) allows us to use 🗽 instead [TODO:  update path]:
 
 ```html
 <div 🗽>
     ...
 </div>
+<be-hive>
+    <script type=mountobserver src="be-a-beacon/🗽.json"></script>
+</be-hive>
+<script type=module>
+    import 'be-hive/be-hive.js';
+</script>
 ```
 
 ### Spell out the name of the event
@@ -120,3 +134,13 @@ import 'be-a-beacon/be-a-beacon.js';
     import 'https://esm.run/be-a-beacon';
 </script>
 ```
+
+
+Strategy:
+
+Define enhancementConfig(s)
+
+Each one generates .json
+
+
+

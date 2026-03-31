@@ -1,0 +1,5 @@
+{
+    "matching": "[🗽], [enh-🗽]",
+    "import": "be-a-beacon/emc.js",
+    "do": "builtIns.enhanceMountedElement"
+}

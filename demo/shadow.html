@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>be-a-beacon with i-am-here</title>
+    <title>be-a-beacon with shadow root</title>
     <!-- #include virtual="/imports.html" -->
 </head>
 <body>
-    <template id='beacon' be-a-beacon></template>
+    <div id=div>
+        <template shadowrootmode="open">
+            <template id='beacon' be-a-beacon></template>
+            <be-hive></be-hive>
+        </template>
+    </div>
     <div id='target'></div>
     <script>
-        beacon.addEventListener('i-am-here', e => {
+        // customElements.define('div-1', class extends HTMLElement {
+            
+        // }); 
+        div.shadowRoot.querySelector('#beacon').addEventListener('i-am-here', e => {
             target.setAttribute('mark', 'good');
         });
     </script>

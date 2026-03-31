@@ -1,65 +1,29 @@
-// @ts-check
-import { propInfo, rejected, resolved } from 'be-enhanced/cc.js';
-import { BE } from 'be-enhanced/BE.js';
-import {dispatchEvent as de} from 'trans-render/positractions/dispatchEvent.js';
-/** @import {BEConfig, IEnhancement, BEAllProps} from './ts-refs/be-enhanced/types.d.ts' */
-/** @import {Actions, PAP, AllProps, AP, BAP} from './ts-refs/be-a-beacon/types' */;
+//@ts-check
+/** @import {EnhancementConfig, SpawnContext, ElementEnhancementGateway} from './types/assign-gingerly/types' */;
+
+/** @import { BeABeaconProps } from './types/be-a-beacon/types' */
 
 /**
- * @implements {Actions}
- * 
+ * @type {typeof BeABeacon & {prototype: BeABeaconProps}}
  */
-class BeABeacon extends BE {
-    /**
-     * @type {BEConfig<BAP, Actions & IEnhancement>}
-     */
-    static config = {
-        propDefaults: {
-            eventName: 'i-am-here'
-        },
-        propInfo: {
-            ...propInfo,
-        },
-        positractions: [resolved, rejected],
-        actions: {
-            hydrate: {
-                ifAllOf: ['eventName']
-            },
-            retire: {
-                ifAllOf: ['resolved']
-            }
-        }
-    };
-
-    de = de;
-
+export class BeABeacon {
     /**
      * 
-     * @param {BAP} self 
-     * @returns 
+     * @param {Element & ElementEnhancementGateway} enhancedElement 
+     * @param {*} ctx 
+     * @param {BeABeaconProps} initVals 
      */
-    hydrate(self) {
-        const { enhancedElement, eventName } = self;
-        const type = eventName === '#' ? enhancedElement.id : eventName;
-        enhancedElement.dispatchEvent(new CustomEvent(type, {
-            bubbles: true,
-        }));
-        return /** @type {PAP} */ ({
-            resolved: true,
-        });
-    }
-
-    /**
-     * 
-     * @param {AP & BEAllProps} self 
-     * @returns 
-     */
-    retire(self) {
-        const { enhancedElement, emc } = 
-        /** @type {any} */
-        (self);
-        enhancedElement.beEnhanced.whenDetached(emc);
+    constructor(enhancedElement, ctx, initVals) {
+        const {eventName} = initVals;
+        let evtName = eventName === '#' ? enhancedElement.id : eventName;
+        if(!evtName) evtName = 'i-am-here';
+        const event = new Event(evtName, {bubbles: true});
+        enhancedElement.dispatchEvent(event);
+        const {config} = ctx;
+        enhancedElement.enh.dispose(config);
     }
 }
-await BeABeacon.bootUp();
-export { BeABeacon };
+
+
+
+
