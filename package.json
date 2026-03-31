@@ -34,9 +34,9 @@
     "update": "ncu -u && npm install"
   },
   "dependencies": {
-    "assign-gingerly": "0.0.23",
-    "be-hive": "0.1.7",
-    "mount-observer": "0.1.23"
+    "assign-gingerly": "0.0.24",
+    "be-hive": "0.1.8",
+    "mount-observer": "0.1.24"
   },
   "devDependencies": {
     "@playwright/test": "1.59.0-alpha-2026-03-20",
