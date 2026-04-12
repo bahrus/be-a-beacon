@@ -22,7 +22,7 @@
   },
   "files": [
     "*.js",
-    "./ts-refs/be-a-beacon/types.d.ts",
+    "./types/be-a-beacon/types.d.ts",
     "README.md"
   ],
   "types": "./ts-refs/be-a-beacon/types.d.ts",
